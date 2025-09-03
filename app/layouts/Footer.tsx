@@ -1,9 +1,9 @@
 import { Link } from "react-router";
-import logoLight from "../welcome/logo-light.svg";
+import logoLight from "../assets/bbm-logo.png";
 
 export function Footer() {
   return (
-    <footer className="bg-gray-100">
+    <footer className="bg-black text-white">
       {/* Main Footer */}
       <div className="container mx-auto px-4 py-12">
         {/* Newsletter and Logo Section */}
@@ -20,7 +20,7 @@ export function Footer() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                className="px-4 py-2 border  border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               />
               <button className="bg-primary text-white px-6 py-2 rounded-md hover:bg-primary/90 transition-colors">
                 Subscribe
@@ -36,17 +36,17 @@ export function Footer() {
             <h4 className="font-semibold mb-4">About</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/about" className="text-gray-600 hover:text-primary">
+                <Link to="/about" className=" hover:text-primary">
                   Our Story
                 </Link>
               </li>
               <li>
-                <Link to="/team" className="text-gray-600 hover:text-primary">
+                <Link to="/team" className=" hover:text-primary">
                   Team
                 </Link>
               </li>
               <li>
-                <Link to="/careers" className="text-gray-600 hover:text-primary">
+                <Link to="/careers" className="hover:text-primary">
                   Careers
                 </Link>
               </li>
@@ -58,17 +58,17 @@ export function Footer() {
             <h4 className="font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/services" className="text-gray-600 hover:text-primary">
+                <Link to="/services" className=" hover:text-primary">
                   Our Services
                 </Link>
               </li>
               <li>
-                <Link to="/pricing" className="text-gray-600 hover:text-primary">
+                <Link to="/pricing" className="hover:text-primary">
                   Pricing
                 </Link>
               </li>
               <li>
-                <Link to="/support" className="text-gray-600 hover:text-primary">
+                <Link to="/support" className="hover:text-primary">
                   Support
                 </Link>
               </li>
@@ -80,17 +80,17 @@ export function Footer() {
             <h4 className="font-semibold mb-4">Explore More</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/blog" className="text-gray-600 hover:text-primary">
+                <Link to="/blog" className=" hover:text-primary">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link to="/events" className="text-gray-600 hover:text-primary">
+                <Link to="/events" className=" hover:text-primary">
                   Events
                 </Link>
               </li>
               <li>
-                <Link to="/resources" className="text-gray-600 hover:text-primary">
+                <Link to="/resources" className=" hover:text-primary">
                   Resources
                 </Link>
               </li>
@@ -106,7 +106,7 @@ export function Footer() {
                   href="https://twitter.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-primary"
+                  className=" hover:text-primary"
                 >
                   Twitter
                 </a>
@@ -116,7 +116,7 @@ export function Footer() {
                   href="https://linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-primary"
+                  className=" hover:text-primary"
                 >
                   LinkedIn
                 </a>
@@ -126,7 +126,7 @@ export function Footer() {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-primary"
+                  className=" hover:text-primary"
                 >
                   Instagram
                 </a>

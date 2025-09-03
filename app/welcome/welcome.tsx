@@ -1,12 +1,130 @@
-import { Button } from "~/components/ui/button";
-import logoDark from "./logo-dark.svg";
-import logoLight from "./logo-light.svg";
+import { HeroSection } from "../components/features/home/HeroSection";
+import { EventCard } from "../components/features/events/EventCard";
+import { RideCard } from "../components/features/rides/RideCard";
+
+const upcomingEvents = [
+  {
+    title: "Weekend Mountain Trail",
+    date: "Sept 15, 2025",
+    location: "Blue Mountain Range",
+    image: "https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    description: "Join us for an exciting mountain trail ride through scenic routes."
+  },
+  {
+    title: "City Night Ride",
+    date: "Sept 20, 2025",
+    location: "Downtown Circuit",
+    image: "https://images.unsplash.com/photo-1597776776684-61122dcf84e6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
+    description: "Experience the city lights on our monthly night ride event."
+  },
+  {
+    title: "Beginner's Workshop",
+    date: "Sept 25, 2025",
+    location: "Central Park",
+    image: "https://images.unsplash.com/photo-1511994298241-608e28f14fde?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    description: "Learn essential biking skills and safety measures."
+  }
+];
+
+const featuredRides = [
+  {
+    title: "Coastal Adventure",
+    distance: "45 km",
+    duration: "3 hours",
+    difficulty: "Moderate" as const,
+    image: "https://images.unsplash.com/photo-1623604288694-d15c2a76c681?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+  },
+  {
+    title: "Forest Trail",
+    distance: "30 km",
+    duration: "2 hours",
+    difficulty: "Easy" as const,
+    image: "https://images.unsplash.com/photo-1544191696-102ad5633098?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+  },
+  {
+    title: "Mountain Challenge",
+    distance: "60 km",
+    duration: "5 hours",
+    difficulty: "Hard" as const,
+    image: "https://images.unsplash.com/photo-1506389516061-3c6de0e1f2ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+  }
+];
 
 export function Welcome() {
   return (
-    <main className="flex items-center justify-center pt-16 pb-4">
-      <h1 className="font-bold text-3xl font-heading">Hello World</h1>
-     <Button className="bg-orange text-white px-4 py-2 rounded-md shadow-md hover:bg-orange/90 transition cursor-pointer">Click me </Button>
+    <main className="min-h-screen">
+      {/* Hero Section */}
+      <HeroSection
+        title="Join the Ultimate Biking Community"
+        description="Connect with fellow riders, discover exciting trails, and participate in thrilling events. Whether you're a beginner or a pro, there's a place for you in our community."
+        ctaText="Join Now"
+        ctaLink="/signup"
+        backgroundImage="https://images.unsplash.com/photo-1533561052604-c3beb6d55b8d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+      />
+
+      {/* Featured Rides Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-4">Featured Rides</h2>
+          <p className="text-gray-600 text-center mb-12">Explore our most popular biking routes and trails</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {featuredRides.map((ride) => (
+              <RideCard key={ride.title} {...ride} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Community Stats Section */}
+      <section className="py-16 bg-primary">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-white">
+            <div>
+              <div className="text-4xl font-bold mb-2">5000+</div>
+              <div className="text-lg">Active Members</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold mb-2">200+</div>
+              <div className="text-lg">Monthly Rides</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold mb-2">50+</div>
+              <div className="text-lg">Unique Routes</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Upcoming Events Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-4">Upcoming Events</h2>
+          <p className="text-gray-600 text-center mb-12">Don't miss out on our exciting community events</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {upcomingEvents.map((event) => (
+              <EventCard key={event.title} {...event} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gray-900 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Join Our Community?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Get access to exclusive events, connect with fellow riders, and discover new trails.
+          </p>
+          <div className="flex justify-center gap-4">
+            <a href="/signup" className="bg-primary text-white px-8 py-3 rounded-md text-lg font-semibold hover:bg-primary/90 transition-colors">
+              Sign Up Now
+            </a>
+            <a href="/about" className="bg-white text-gray-900 px-8 py-3 rounded-md text-lg font-semibold hover:bg-gray-100 transition-colors">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
