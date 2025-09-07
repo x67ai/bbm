@@ -5,6 +5,7 @@ import CommunitySection from "~/components/features/home/CommunitySection";
 import WhyBBM from "~/components/features/home/WhyBBM";
 import GearSection from "~/components/features/home/GearSection";
 import FaqSection from "~/components/features/home/FaqSection";
+import CommunityForumSection from "~/components/features/home/CommunityForumSection";
 
 export function Welcome() {
   return (
@@ -22,6 +23,7 @@ export function Welcome() {
       <WhyBBM />
      <GearSection />
      <FaqSection/>
+     <CommunityForumSection/>
     </main>
   );
 }
