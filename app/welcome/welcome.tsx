@@ -1,11 +1,10 @@
 import { HeroSection } from "../components/features/home/HeroSection";
-import { EventCard } from "../components/features/events/EventCard";
-import { RideCard } from "../components/features/rides/RideCard";
 import heroImg from "../assets/heroimg.jpg";
 import AboutSection from "~/components/features/home/AboutSection";
 import CommunitySection from "~/components/features/home/CommunitySection";
 import WhyBBM from "~/components/features/home/WhyBBM";
 import GearSection from "~/components/features/home/GearSection";
+import FaqSection from "~/components/features/home/FaqSection";
 
 export function Welcome() {
   return (
@@ -22,6 +21,7 @@ export function Welcome() {
       <CommunitySection />
       <WhyBBM />
      <GearSection />
+     <FaqSection/>
     </main>
   );
 }
